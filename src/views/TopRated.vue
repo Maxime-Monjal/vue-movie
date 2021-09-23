@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1 class="text-3xl max-w-screen-xl mx-auto pt-4 px-4">
-      Les films du moment
+      Les films les mieux notés
     </h1>
     <Movie :movie="movies" />
   </div>
@@ -22,7 +22,7 @@ export default {
     const BASE_URL = process.env.VUE_APP_BASE_URL;
     const API_SECRET = process.env.VUE_APP_API_SECRET;
     axios
-      .get(`${BASE_URL}popular?api_key=${API_SECRET}&language=fr&page=1`)
+      .get(`${BASE_URL}top_rated?api_key=${API_SECRET}&language=fr&page=1`)
       .then((res) => {
         this.movies = res.data.results;
       });
