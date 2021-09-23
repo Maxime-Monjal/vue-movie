@@ -14,37 +14,37 @@ const routes = [
     path: "/top_rated",
     name: "TopRated",
     // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
+    // this generates a separate chunk (toprated.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/TopRated.vue"),
+      import(/* webpackChunkName: "toprated" */ "../views/TopRated.vue"),
   },
   {
     path: "/upcoming",
     name: "Upcoming",
     // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
+    // this generates a separate chunk (upcoming.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Upcoming.vue"),
+      import(/* webpackChunkName: "upcoming" */ "../views/Upcoming.vue"),
   },
   {
     path: "/:title/:id",
     name: "Film",
     // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
+    // this generates a separate chunk (film.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/Film.vue"),
+      import(/* webpackChunkName: "film" */ "../views/Film.vue"),
   },
   {
     path: "/:title/similar/:id",
     name: "SimilarFilm",
     // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
+    // this generates a separate chunk (similar.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/SimilarFilm.vue"),
+      import(/* webpackChunkName: "similar" */ "../views/SimilarFilm.vue"),
   },
 ];
 

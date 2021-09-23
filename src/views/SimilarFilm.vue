@@ -27,7 +27,6 @@ export default {
         `${BASE_URL}${this.$route.params.id}/similar?api_key=${API_SECRET}&language=fr`
       )
       .then((res) => {
-        console.log(res.data.results);
         this.movies = res.data.results;
       });
   },
