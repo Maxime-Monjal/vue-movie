@@ -20,14 +20,12 @@ export default {
     };
   },
   mounted() {
-    const BASE_URL = process.env.VUE_APP_BASE_URL;
-    const API_SECRET = process.env.VUE_APP_API_SECRET;
     axios
       .get(
-        `${BASE_URL}${this.$route.params.id}/similar?api_key=${API_SECRET}&language=fr`
+        `https://backend-vue-movie.herokuapp.com/film/similar/${this.$route.params.id}`
       )
       .then((res) => {
-        this.movies = res.data.results;
+        this.movies = res.data;
       });
   },
 };

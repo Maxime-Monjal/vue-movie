@@ -19,12 +19,10 @@ export default {
     };
   },
   mounted() {
-    const BASE_URL = process.env.VUE_APP_BASE_URL;
-    const API_SECRET = process.env.VUE_APP_API_SECRET;
     axios
-      .get(`${BASE_URL}top_rated?api_key=${API_SECRET}&language=fr&page=1`)
+      .get(`https://backend-vue-movie.herokuapp.com/toprated`)
       .then((res) => {
-        this.movies = res.data.results;
+        this.movies = res.data;
       });
   },
 };

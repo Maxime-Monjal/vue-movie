@@ -115,22 +115,20 @@ export default {
       actor: [],
     };
   },
-  beforeCreate() {
-    const BASE_URL = process.env.VUE_APP_BASE_URL;
-    const API_SECRET = process.env.VUE_APP_API_SECRET;
+  mounted() {
     axios
       .get(
-        `${BASE_URL}${this.$route.params.id}?api_key=${API_SECRET}&language=fr`
+        `https://backend-vue-movie.herokuapp.com/film/${this.$route.params.id}`
       )
       .then((res) => {
         this.movie = res.data;
       });
     axios
       .get(
-        `${BASE_URL}${this.$route.params.id}/credits?api_key=${API_SECRET}&language=fr`
+        `https://backend-vue-movie.herokuapp.com/actors/${this.$route.params.id}`
       )
       .then((res) => {
-        this.actor = res.data.cast;
+        this.actor = res.data;
       });
   },
   methods: {
