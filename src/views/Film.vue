@@ -7,7 +7,7 @@
     <img
       v-if="movie.backdrop_path"
       class="max-w-screen-xl w-full mx-auto pt-4 px-4"
-      :src="`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`"
+      :src="`https://image.tmdb.org/t/p/original/${movie.backdrop_path}`"
       :alt="movie.id"
       width="500"
       height="500"
