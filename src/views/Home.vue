@@ -18,8 +18,8 @@ export default {
       movies: [],
     };
   },
-  mounted() {
-    axios.get(`https://backend-vue-movie.herokuapp.com/`).then((res) => {
+  async mounted() {
+    await axios.get(`https://backend-vue-movie.herokuapp.com/`).then((res) => {
       this.movies = res.data;
     });
   },

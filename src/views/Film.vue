@@ -115,15 +115,15 @@ export default {
       actor: [],
     };
   },
-  mounted() {
-    axios
+  async mounted() {
+    await axios
       .get(
         `https://backend-vue-movie.herokuapp.com/film/${this.$route.params.id}`
       )
       .then((res) => {
         this.movie = res.data;
       });
-    axios
+    await axios
       .get(
         `https://backend-vue-movie.herokuapp.com/actors/${this.$route.params.id}`
       )
