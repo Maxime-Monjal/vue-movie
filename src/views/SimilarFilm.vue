@@ -19,7 +19,7 @@ export default {
       movies: [],
     };
   },
-  async mounted() {
+  async beforeCreate() {
     await axios
       .get(
         `https://backend-vue-movie.herokuapp.com/film/similar/${this.$route.params.id}`
