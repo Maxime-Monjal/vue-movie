@@ -22,7 +22,7 @@ export default {
   async beforeCreate() {
     await axios
       .get(
-        `https://backend-vue-movie.herokuapp.com/film/similar/${this.$route.params.id}`
+        `https://backend-vue-movie.herokuapp.com/movie/similar/${this.$route.params.id}`
       )
       .then((res) => {
         this.movies = res.data;
